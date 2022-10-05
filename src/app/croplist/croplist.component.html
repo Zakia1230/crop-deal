@@ -1,0 +1,109 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="container bootdey">
+        <!-- <div>
+            <p><input type="text" id="searchText" name="searchText" [(ngModel)]="searchText"></p>
+            <button type="button" (click)="searchCrop()">search Crop</button>
+        </div> -->
+
+        <form (ngSubmit)="searchCrop($event)">
+            <input name="searchText" value="">
+            <button type="submit" class="btn btn-primary" >search Crop</button>
+         </form>
+         
+
+        <div class="card-top container-fluid">
+            <div class="container d-flex">    
+                <div class="col-md-12">
+                    <div class="row crop-list">
+                        <div class="col-md-4" *ngFor="let product of products">
+                            <section class="panel">
+                                <div class="pro-img-box">
+                                    <img [src]="createPath(product.imageUrl)" alt="" />
+                                    <a type="button" (click)="addToCart(product)" class="adtocart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </a>
+                                </div>
+            
+                                <div class="panel-body text-center">
+                                    <h4>
+                                        <a type="button" (click)="addToCart(product)" class="pro-title">
+                                            {{product.cropName}}
+                                        </a>
+                                    </h4>
+                                    <p class="price">Rs.{{product.price}}/Kg</p>
+                                    <p class="availquantity">Available Quantity : {{product.availQuantity}}</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+    <!-- </div> -->
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

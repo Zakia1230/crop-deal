@@ -1,0 +1,106 @@
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+<div class="container">                
+<div class="contentbar">                
+        
+        <div class="row">
+            
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <div class="card m-b-30">
+                    <div class="card-header">
+                        <h5 class="card-title">Cart</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-8">
+                                <div class="cart-container">
+                                    <div class="cart-head">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Action</th>                                               
+                                                        <th scope="col">Photo</th>
+                                                        <th scope="col">Product</th>
+                                                        <th scope="col">Qty</th>
+                                                        
+                                                        <th scope="col">Price</th>
+                                                        <th scope="col" class="text-right">Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let product of cart; index as i">
+                                                        <th scope="row">{{i+1}}</th>
+                                                        <td><a (click)="removeProductToCart(product)" class="text-danger"><i class="ri-delete-bin-3-line"></i></a></td>
+                                                        <td><img [src]="createPath(product.imageUrl)" class="img-fluid" width="35" alt="product"></td>
+                                                        <td>{{product.cropName}}</td>
+                                                        <td>
+                                                            <div class="form-group mb-0">
+                                                                <input type="number" min="1" max="1000"  class="form-control cart-qty" name="cartQty1" id="cartQty1" value="{{product.selectedQty}}" placeholder="1">
+                                                            </div>
+                                                        </td>
+                                                        
+                                                        <td>&#x20B9;{{product.price}}/kg</td>
+                                                        <td class="text-right">&#x20B9;{{product.total}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="cart-body">
+                                        <div class="row">
+                                            
+                                            <div class="col-md-12 order-1 order-lg-2 col-lg-7 col-xl-6">
+                                                <div class="order-total table-responsive ">
+                                                    <table class="table table-borderless text-right">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Sub Total :</td>
+                                                                <td>&#x20B9;{{total}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Transportation Cost :</td>
+                                                                <td>&#x20B9;0.00</td>
+                                                            </tr>
+                                                           
+                                                            <tr>
+                                                                <td class="f-w-7 font-18"><h4>Amount :</h4></td>
+                                                                <td class="f-w-7 font-18"><h4>&#x20B9;{{total}}</h4></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-footer text-right">
+                                        
+                                    <a (click)="redirectToPaymentPage()" class="btn btn-success my-1">Proceed to Checkout<i class="ri-arrow-right-line ml-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+        
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

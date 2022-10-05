@@ -1,0 +1,20 @@
+
+    .test1{
+      font-size: 4.25rem;
+      font-family:'Italianno', cursive;; 
+    }
+
+.demo{
+  font-size: 1.75rem;
+  font-family: ui serif; 
+}
+
+.image{
+  align-items: center;
+}
+
+.title_block{
+  text-align: center;
+  font-size: xx-large;
+  color:crimson;
+}

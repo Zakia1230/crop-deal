@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> Payment</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="main" >
+<h3 style="padding-left: 100px;">{{ title }}</h3>
+
+<google-pay-button
+  style="padding-left: 100px"
+    environment="TEST"
+    buttonType="buy"
+    buttonColor="black"
+    [paymentRequest]="paymentRequest"
+    (loadpaymentdata)="onLoadPaymentData($event)"
+    (error)="onError($event)"
+    [paymentAuthorizedCallback]="onPaymentDataAuthorized">
+</google-pay-button>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.main{
+    height:350px;
+    padding-top: 50px;
+    background-image: url('../../assets/Images/razorpay.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.gpay-card-info-container.black {
+    background-color: #000;
+    box-shadow: none;
+    height: 70px;
+}
